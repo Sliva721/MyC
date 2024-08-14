@@ -1,17 +1,14 @@
 #include <stdio.h>
-int main(void){
-  int a=7, b=2;
-  int res;
-  res = a+b;
-  printf("%d + %d = %d\n",a,b,res);
-  res = a-b;
-  printf("%d - %d = %d\n",a,b,res);
-  res = a*b;
-  printf("%d * %d = %d\n",a,b,res);
-  res = a%b;
-  printf("%d %% %d = %d\n",a,b,res);
-  float result;
-  result = (float) a/b;
-  printf("%d / %d = %3.1f\n",a,b,result);
+#include <math.h> // подключаем math.h
+int main (void) {
+  int a, b, c2;
+
+  printf("Vvesti dlinnu 1 kateta = \n");
+  scanf("%d",&a);
+  printf("Vvesti dlinnu 2 kateta = \n");
+  scanf("%d",&b);
+	c2 =  a*a + b*b;
+ printf("c = %.2f\n", sqrt(c2)); 
+
   return 0;
 }
