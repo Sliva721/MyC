@@ -5,9 +5,9 @@ int main (void) {
 
   scanf("%d",&a);
   scanf("%d",&b);
-	
+
   c2 =  a*a + b*b;
-  printf("c = %.2f\n", sqrt(c2)); 
+  printf("c = %.2f\n", sqrt(c2));
 
   return 0;
 }
