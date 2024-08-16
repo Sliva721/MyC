@@ -2,3 +2,7 @@ test
 build/Debug/*
 sin_a
 pifagor
+random_gen
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/settings.json
