@@ -1,3 +1,4 @@
+#include <stdio.h>
 int main() {
  int A,a1,a2,a3,a4;
 //    double X; //от другой задачи
