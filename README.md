@@ -1,1 +1,1 @@
-This is a repo with the results of my C lessons
+__**These are my lessons at Stepik**__
