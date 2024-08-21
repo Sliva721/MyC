@@ -2,5 +2,9 @@ test
 build/Debug/*
 sin_a
 pifagor
-4321_4-3-2-1
-learn
+random_gen
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/settings.json
+.vscode/launch.json
+.vscode/launch.json
