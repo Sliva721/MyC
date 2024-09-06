@@ -6,8 +6,8 @@
 void print_array (int A [])
 {
  for(int i=0; i < N ; ++i) 
-               printf(" %d ", arr[i]);
-               printf("\n");
+     printf(" %d ", arr[i]);
+         printf("\n");
 }
 
 int main() {
@@ -17,10 +17,14 @@ int N,i=0;
    
     int arr[N];
         
-        // Вывод значений на экран
+  // Стандарт ввода внешних данных в массив
+  
         for(int i=0 ; i < N; ++i)
-             scanf("%d", &arr[i]);
+            scanf("%d", &arr[i]);
+
+  // Стандарт вывода данных из массива на экран
         for(int i=0; i < N ; ++i) 
                printf("%d ", arr[i]);
+   
     return 0;
 }
