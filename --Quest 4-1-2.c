@@ -10,4 +10,6 @@ int main() {
 		}
 	}
 	printf("%d", counter == 2);
+	  return 0;
+    
 }
