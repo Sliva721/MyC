@@ -1,13 +1,12 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-int main() 
-{
- int N;
-    scanf("%d",&N);
-    
- int k=1,a=0;
-// printf("%d\n",N);
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int k = 1, a = 0;
+    // printf("%d\n",N);
     for (;N<=1;printf "\n); 
     
      while (a < N) 

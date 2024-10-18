@@ -3,16 +3,14 @@
 #include <stdio.h>
 
 int main() {
-  int N, a, b;
-  scanf("%d", &N);
-  while (N--)
-  {
-      scanf("%d", &a);
-      if (b != a)
-      {
-          printf("%d ", a);
-          b = a;
-      }
-  }
-  return 0;
+    int N, a, b;
+    scanf("%d", &N);
+    while (N--) {
+        scanf("%d", &a);
+        if (b != a) {
+            printf("%d ", a);
+            b = a;
+        }
+    }
+    return 0;
 }

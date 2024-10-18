@@ -14,13 +14,9 @@ learn.c
 BodyHealth
 BodyHealth-1
 Switch_CalcNa0
-#Switch_MyAge
-#Switch_MyAge
-#Switch_MyAge
-#Switch_MyAge
+Switch_MyAge
 If-Else_TheLockCode
 If-Else_TheLockCode 
 If-Else_TheLockCode 
 .vscode/launch.json
-.vscode/launch.json
-.vscode/launch.json
+.clang-format

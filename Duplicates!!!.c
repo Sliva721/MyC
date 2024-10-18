@@ -5,17 +5,16 @@
 #include <stdio.h>
 
 int main() {
-    int N,n,p=0,c=0;
-    scanf ("%d",&N);  
+    int N, n, p = 0, c = 0;
+    scanf("%d", &N);
 
-    while (c<N) 
-{
-    	scanf ("%d",&n); 
-            if (p != n) //вот тут была ";" с........а!!!!
-           printf ("%d ",n);
-         p=n;
-          c++; 
+    while (c < N) {
+        scanf("%d", &n);
+        if (p != n)  //вот тут была ";" с........а!!!!
+            printf("%d ", n);
+        p = n;
+        c++;
     }
-   
+
     return 0;
 }
