@@ -19,4 +19,10 @@ If-Else_TheLockCode
 If-Else_TheLockCode 
 If-Else_TheLockCode 
 .vscode/launch.json
+<<<<<<< HEAD
 .clang-format
+=======
+.vscode/launch.json
+.vscode/launch.json
+.vscode/launch.json
+>>>>>>> b8f9e1bc64cda4cd559d709df7bea27dbd1b48c3
