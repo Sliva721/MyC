@@ -1,13 +1,10 @@
 test
 build/Debug/*
 .vscode/*.json
-.vscode/launch.json
 <<<<<<< HEAD
 .clang-format
 =======
-.vscode/launch.json
-.vscode/launch.json
-.vscode/launch.json
+.vscode/*.json
 >>>>>>> b8f9e1bc64cda4cd559d709df7bea27dbd1b48c3
 <<<<<<< HEAD
 .vscode/*.json
