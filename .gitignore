@@ -10,4 +10,5 @@ build/Debug/*
 .vscode/*.json
 =======
 >>>>>>> 13ec1ea025ccfd4eb178bb49a1625f1ad13d4fa9
-*.out
+MyC-/*.out
+
