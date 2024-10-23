@@ -4,7 +4,7 @@
 int main() {
     setlocale(LC_ALL, "");
     int k, a, b;
-    scanf("%d%", &k);
+    scanf("%d", &k);
     a = k;
     b = k;
     switch (a) {
