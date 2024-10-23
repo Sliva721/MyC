@@ -9,13 +9,13 @@ int main() {
 
     //
     int arr[n][m];
-    for (int i = 0; i < n; i++)        
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++) {  //    СЧИТЫВАЕМ (scanf) ЗНАЧЕНИЯ ПОСТРОЧНО
             scanf("%d", &arr[i][j]);
-        }  
+        }
 
-    for (int j = 0; j < m; j++) {       
-        for (int i = 0; i < n; i++)      //   ВЫВОДИМ НА ЭКРАН СТОЛБЦЫ но в СТРОКИ
+    for (int j = 0; j < m; j++) {
+        for (int i = 0; i < n; i++)    //   ВЫВОДИМ НА ЭКРАН СТОЛБЦЫ но в СТРОКИ
             printf("%d ", arr[i][j]);  //
         printf("\n");
     }
