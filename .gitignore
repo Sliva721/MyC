@@ -1,23 +1,6 @@
 test
 build/Debug/*
-sin_a
-pifagor
-random_gen
-.vscode/c_cpp_properties.json
-.vscode/launch.json
-.vscode/settings.json
-.vscode/launch.json
-.vscode/launch.json
-learn
-Lubit_ne_lubit
-learn.c
-BodyHealth
-BodyHealth-1
-Switch_CalcNa0
-Switch_MyAge
-If-Else_TheLockCode
-If-Else_TheLockCode 
-If-Else_TheLockCode 
+.vscode/*.json
 .vscode/launch.json
 <<<<<<< HEAD
 .clang-format
@@ -27,10 +10,7 @@ If-Else_TheLockCode
 .vscode/launch.json
 >>>>>>> b8f9e1bc64cda4cd559d709df7bea27dbd1b48c3
 <<<<<<< HEAD
-.vscode/launch.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/tasks.json
+.vscode/*.json
 =======
 >>>>>>> 13ec1ea025ccfd4eb178bb49a1625f1ad13d4fa9
 *.out
