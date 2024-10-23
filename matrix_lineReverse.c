@@ -11,7 +11,7 @@ int main() {
     scanf("%d", &N);
 
     int A[N][N];
-    int i, j;
+
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
             if (i % 2 == 0) {
@@ -19,7 +19,6 @@ int main() {
             } else {
                 A[i][j] = N - j;
             }
-
             printf("%d ", A[i][j]);
         }
         printf("\n");
