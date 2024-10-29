@@ -7,27 +7,23 @@
 1 2 3 4
 1 3 4 5
 0 2 3 -2
-*/ 
+*/
 
 #include <stdio.h>
 
 int main() {
-    int n, m ;
+    int n, m;
     scanf("%d %d", &n, &m);
     int arr[n][m];
 
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < m; j++)
-            scanf("%d", &arr[i][j]);
-
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) scanf("%d", &arr[i][j]);
     }
 
-    for (int j = m-1; j >= 0; j--){
+    for (int j = m - 1; j >= 0; j--) {
         int column = 0;
-        for (int i = 0; i < n; i++)
-            column += arr[i][j];
+        for (int i = 0; i < n; i++) column += arr[i][j];
         printf("%d ", column);
-
     }
 
     return 0;

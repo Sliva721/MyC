@@ -1,12 +1,12 @@
 //Вычислить сумму всех столбцов матрицы и поменять местами столбцы с минимальной
 // и максимальной суммой.
 
-// rows - строки 
+// rows - строки
 // columns - столбцы
 
 #include <stdio.h>
 
-#define MAX_ROWS 100 
+#define MAX_ROWS 100
 #define MAX_COLUMNS 100
 
 int main() {

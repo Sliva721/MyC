@@ -11,5 +11,4 @@ int main() {
     }
     printf("Tab=%d, Space=%d, NewLine=%d", sumtab, sumspace, sumnewline);
     return 0;
-    
 }

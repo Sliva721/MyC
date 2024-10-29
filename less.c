@@ -14,14 +14,13 @@
 #include <stdio.h>
 
 int main() {
-    
     int n = 0, m = 0;
-   scanf("%d%d", &n, &m);
+    scanf("%d%d", &n, &m);
 
     int matrix[n][m];
     int sum[m];
-    int minindex = 0, maxindex = 0,minsum = 0, maxsum = 0;
-   
+    int minindex = 0, maxindex = 0, minsum = 0, maxsum = 0;
+
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             scanf("%d", &matrix[i][j]);
@@ -29,7 +28,7 @@ int main() {
     }
 
     // Вычисление сумм столбцов
- //   int sum = 0;
+    //   int sum = 0;
     for (int j = 0; j < m; j++) {
         for (int i = 0; i < n; i++) {
             sum[j] += matrix[i][j];
