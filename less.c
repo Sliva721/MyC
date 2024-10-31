@@ -18,9 +18,6 @@ int main() {
     scanf("%d%d", &n, &m);
 
     int matrix[n][m];
-    int sum[m];
-    int minindex = 0, maxindex = 0, minsum = 0, maxsum = 0;
-
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             scanf("%d", &matrix[i][j]);
@@ -28,34 +25,29 @@ int main() {
     }
 
     // Вычисление сумм столбцов
-    //   int sum = 0;
-    for (int j = 0; j < m; j++) {
-        for (int i = 0; i < n; i++) {
-            sum[j] += matrix[i][j];
-        }
-    }
 
-    // Определение минимальной и максимальной суммы столбцов
-    minsum = sum[0];
-    maxsum = sum[0];
+    int maxsum = 0, minsum = 0, max_idx = 0, min_idx = 0;
 
     for (int j = 0; j < m; j++) {
-        if (sum[j] < minsum) {
-            minsum = sum[j];
-            minindex = j;
-            printf("minsum = %d, minindex = %d", minsum, j);
+        int sum = 0;
+       for (int i = 0; i < n; i++) 
+            sum += matrix[i][j];
+      
+        if (j < 1 || sum > maxsum) {
+            maxsum = sum;
+            max_idx = j;
         }
-        if (sum[j] > maxsum) {
-            maxsum = sum[j];
-            maxindex = j;
+        if (j < 1 || sum < minsum) {
+            minsum = sum;
+            min_idx = j;
         }
     }
 
     // Меняем местами столбцы с минимальной и максимальной суммой
     for (int i = 0; i < n; i++) {
-        int temp = matrix[i][minindex];
-        matrix[i][minindex] = matrix[i][maxindex];
-        matrix[i][maxindex] = temp;
+        int tmp = matrix[i][min_idx];
+        matrix[i][min_idx] = matrix[i][max_idx];
+        matrix[i][max_idx] = tmp;
     }
 
     // Вывод измененной матрицы
