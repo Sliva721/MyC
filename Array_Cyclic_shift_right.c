@@ -1,4 +1,4 @@
-/*Циклический сдвиг одномерного массива ВЛЕВО на 1 элемент*/
+/*Циклический сдвиг одномерного массива ВПРАВО на 1 элемент*/
 
 #include <stdio.h>
 
@@ -26,17 +26,5 @@ int main() {
      array[0] = tmp;
      printArray(array,n);
 
-
-    /*
-        int data[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) scanf("%d", &data[i][j]);
-        }
-        for (int i = 0; i < n; i++) {
-             for (int j = 0; j < m; j++)
-                 printf("%d ", data[i][j]);
-                  printf("\n");
-       }
-       */
     return 0;
 }
