@@ -2,4 +2,7 @@
 !*/
 !*.*
 build/*
+.vscode/*
 *.out
+*.json
+*.code-workspace
