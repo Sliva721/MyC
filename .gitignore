@@ -5,3 +5,4 @@ build/Debug/*
 .vscode/*.json
 MyC-/*.out
 build
+*.
