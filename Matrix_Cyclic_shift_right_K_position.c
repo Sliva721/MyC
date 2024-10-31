@@ -30,12 +30,11 @@ void printMatrix(int n, int m, int data[n][m]) {
 }
 
 int main() {
-    // int n = 0, m = 0, k = 0;
-    int n = 0, m = 0;
-    // if ((scanf("%d%d%d", &n, &m, &k)) != 3 || n <= 0 || m <= 0 || k < 0) {
-    //     printf("n\a");
-    if ((scanf("%d%d", &n, &m)) != 2 || n <= 0 || m <= 0) {
-        printf("n\a");
+   int n = 0, m = 0, k = 0;
+   
+   if ((scanf("%d%d%d", &n, &m, &k)) != 3 || n <= 0 || m <= 0 || k < 0) {
+       printf("n\a");
+   
     }
     int data[n][m];
     for (int i = 0; i < n; i++) {
