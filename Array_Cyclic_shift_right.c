@@ -1,4 +1,8 @@
+/*Циклический сдвиг одномерного массива ВЛЕВО на 1 элемент*/
+
 #include <stdio.h>
+
+/* САМОСТОЯТЕЛЬНАЯ ФУНКЦИЯ ПЕЧАТИ МАССИВА*/
 
 void printArray(int array[], int n) {
     for (int i = 0; i < n; i++) printf("%d ", array[i]);
@@ -11,13 +15,15 @@ int main() {
 
     int array[n];
     for (int i = 0; i < n; i++) scanf("%d", &array[i]);
-    printArray(array,n);
+    //printArray(array,n);
     
 
-    /*Cyclic shift to the left- циклический сдвиг влево*/
+    /*Cyclic shift to the right- циклический сдвиг ВПРАВО*/
 
-     for (int i = 0; i < n - 1; i++ )
-     array[i] = array[i + 1];
+    int tmp = array[n-1];
+     for (int i = n-1; i > 0; i-- )
+     array[i] = array[i -  1];
+     array[0] = tmp;
      printArray(array,n);
 
 
