@@ -1,30 +1,42 @@
-/*Реверс значений одномерного массива*/
-
 #include <stdio.h>
 
-/* САМОСТОЯТЕЛЬНАЯ ФУНКЦИЯ ПЕЧАТИ МАССИВА*/
-
-void printArray(int array[], int n) {
-    for (int i = 0; i < n; i++) printf("%d ", array[i]);
-    printf("\n");
-}
-void reverseArray(int array[], int n) {
-    for (int i = 0; i < n / 2; i++) {
-        int tmp = array[i];
-        array[i] = array[n - 1 - i];
-        array[n - 1 - i] = tmp;
+void printMatrix(int n, int m, int data[n][m]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%d ", data[i][j]);
+        }
+        printf("\n");
     }
 }
 
 int main() {
-    int n = 0;
-    if ((scanf("%d", &n)) != 1 || n < 0) printf("n/a");
+    int n = 0, m = 0;
+    if ((scanf("%d%d", &n, &m)) != 2 || n <= 0 || m <= 0) {
+        printf("n\a");
+    }
 
-    int array[n];
-    for (int i = 0; i < n; i++) scanf("%d", &array[i]);
+    /*Объявляем  массив и вносим значения*/
 
-    reverseArray(array, n);
-    printArray(array, n);
+    int data[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) scanf("%d", &data[i][j]);
+           }
+            printMatrix(n, m, data);
+/* Функция поворота матрицы*/
+    int tmp;
+    for (int i = 0; i < n / 2; i++) {
+        for (int j = i; j < n - 1 - i; j++) {
+            tmp = data[i][j];
+            data[i][j] = data[n - j - 1][i];
+            data[n - j - 1][i] = data[n - i - 1][n - j - 1];
+            data[n - i - 1][n - j - 1] = data[j][n - i - 1];
+            data[j][n - i - 1] = tmp;
+        }
+    
+}
+printf("Повернутая матрица\n");
+printMatrix(n, m, data);
 
-    return 0;
+return 0;
+
 }
