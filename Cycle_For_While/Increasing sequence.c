@@ -12,7 +12,6 @@ int main() {
         p = N;
         scanf("%d", &N);
     }
-
     printf("YES");
     return 0;
 }

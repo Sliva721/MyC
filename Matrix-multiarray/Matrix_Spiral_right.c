@@ -16,13 +16,13 @@ M и N не превышают 10.
 
 int main()
 {
-    int N, M;
+    int n, m;
 
-    scanf("%d%d", &N, &M);
-    int **a = (int **)malloc(N * sizeof(int *));
-    for (int i = 0; i < N; ++i)
+    scanf("%d%d", &n, &m);
+    int **a = (int **)malloc(n * sizeof(int *));
+    for (int i = 0; i < n; i++)
     {
-        a[i] = (int *)malloc(M * sizeof(int));
+        a[i] = (int *)malloc(m * sizeof(int));
     }
 
     int iStart = 0, iBord = 0, jStart = 0, jBord = 0;
@@ -31,19 +31,19 @@ int main()
     int i = 0;
     int j = 0;
 
-    while (k <= N * M)
+    while (k <= n * m)
     {
         a[i][j] = k;
-        if (i == iStart && j < M - jBord - 1)
+        if (i == iStart && j < m - jBord - 1)
             ++j;
-        else if (j == M - jBord - 1 && i < N - iBord - 1)
+        else if (j == m - jBord - 1 && i < n - iBord - 1)
             ++i;
-        else if (i == N - iBord - 1 && j > jStart)
+        else if (i == m - iBord - 1 && j > jStart)
             --j;
         else
             --i;
 
-        if ((i == iStart + 1) && (j == jStart) && (jStart != M - jBord - 1))
+        if ((i == iStart + 1) && (j == jStart) && (jStart != m - jBord - 1))
         {
             ++iStart;
             ++iBord;
@@ -53,16 +53,16 @@ int main()
         ++k;
     }
 
-    for (int i = 0; i < N; ++i)
+    for (int i = 0; i < n; ++i)
     {
-        for (int j = 0; j < M; ++j)
+        for (int j = 0; j < m; ++j)
         {
             printf("%3d", a[i][j]);
         }
         printf("\n");
     }
 
-    for (int i = 0; i < N; ++i)
+    for (int i = 0; i < n; ++i)
     {
         if (a[i])
         {

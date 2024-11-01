@@ -1,3 +1,8 @@
+/* Программа вывода символов, которые стоят до и после введенного
+INPUT DATA: d
+OUTPUT DATA c e
+*/
+
 #include <stdio.h>
 
 int main() {
