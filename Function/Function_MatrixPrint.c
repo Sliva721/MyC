@@ -10,9 +10,3 @@ void printMatrix(int n, int m, int data[n][m]) {
         printf("\n");
     }
 }
-int main() {
-    int data[n][m];
-    printMatrix(n, m, data); //вот она
-
-    return 0;
-}
