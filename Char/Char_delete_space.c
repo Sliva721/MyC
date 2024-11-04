@@ -22,7 +22,7 @@ b = 's'; // Инициализация переменной b символом '
 
 #include <stdio.h>
 int main() {
-    int a, b;
+int a, b;
     b = 'с';
     while ((a = getchar()) != EOF) {
         if (a != ' ' || b != ' ') putchar(a);

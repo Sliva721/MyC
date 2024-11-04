@@ -1,3 +1,6 @@
+/*Сумма сиволов в строке
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
