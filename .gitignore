@@ -6,3 +6,5 @@ build/*
 *.out
 *.json
 *.code-workspace
+less*.c
+less.c
