@@ -1,6 +1,7 @@
 /*Функция чтения строки из входного апотока до конца - символа '\0'
 */
-  while (fgets(str, sizeof(str), stdin)) {
+
+while (fgets(str, sizeof(str), stdin)) {
 
    }
 
