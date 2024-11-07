@@ -1,4 +1,6 @@
-#include<stdio.h>
+/*Функция нахождения минимального значения из трех
+*/
+
 
 int min(int a, int b, int c){
    int min = a;

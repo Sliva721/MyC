@@ -1,8 +1,6 @@
 /*Функция нахождения факториала числа
 */
 
-#include <stdio.h>
-
 int factorial(int k){
     int F = 1;
     if (k <= 0) k = 1;
