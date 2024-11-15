@@ -1,0 +1,11 @@
+Compilation:
+gcc file -std=c11 -Wall -Werror -Wextra  "file.c" -o -lm
+
+Formatting:
+clang-format -i file.c
+
+Memory leaks:
+valgrind --tool=memcheck --leak-check=yes ./file 
+
+Static Code Analyzer:
+cppcheck --enable=all --suppress=missingIncludeSystem file
