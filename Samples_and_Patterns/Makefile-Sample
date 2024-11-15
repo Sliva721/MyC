@@ -1,0 +1,32 @@
+# Компилятор sample
+CC = gcc
+
+# Флаги компиляции
+CFLAGS = -Wall -Wextra -Werror
+
+# Флаги линковки
+LDFLAGS = -lm      #<math.h>
+
+# Исходные файлы
+SRC = main_executable_module.c ../data_libs/data_io.c ../data_libs/data_sort.c ../data_libs/data_stat.c ../data_module/data_process.c ../yet_another_decision_module/decision.c
+
+# Имя выходного файла
+OUTPUT = Quest_3
+
+# Директория сборки
+BUILD_DIR = ../../build
+
+# Пути к заголовочным файлам
+INCLUDE_PATHS = -I../data_libs -I../data_module -I../yet_another_decision_module
+
+# Правило для сборки
+all: $(BUILD_DIR)/$(OUTPUT)
+
+# Правило для компиляции и линковки
+$(BUILD_DIR)/$(OUTPUT): $(SRC)
+ mkdir -p $(BUILD_DIR)
+ $(CC) $(CFLAGS) $(INCLUDE_PATHS) $(SRC) -o $(BUILD_DIR)/$(OUTPUT) $(LDFLAGS)
+
+# Правило для очистки
+clean:
+ rm -rf $(BUILD_DIR)
