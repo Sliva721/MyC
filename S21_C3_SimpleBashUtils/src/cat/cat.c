@@ -3,11 +3,14 @@
 #include <string.h>
 #include "../common/utils.h"
 
-void PrintFileContent(FILE *file, int number_non_blank, int number_all, int squeeze_blank, int show_tabs, int show_ends, int show_nonprinting) {
+// Функция для печати содержимого файла с различными опциями
+void PrintFileContent(FILE *file, int number_non_blank, int number_all, int squeeze_blank,
+                      int show_tabs, int show_ends, int show_nonprinting) {
     char line[1024];
-    int blank_lines = 0;        // Счетчик пустых строк
-    int non_blank_line_count = 0; // Счетчик непустых строк для нумерации
-    int all_line_count = 0;     // Счетчик для нумерации всех строк
+    int blank_lines = 0;               // Счетчик пустых строк
+    int non_blank_line_count = 0;      // Счетчик непустых строк для нумерации
+    int all_line_count = 0;             // Счетчик для нумерации всех строк
+    int printed_last_line = 0;        // Флаг для отметки, печаталась ли последняя строка
 
     while (fgets(line, sizeof(line), file) != NULL) {
         all_line_count++; // Увеличиваем счетчик всех строк при каждой итерации
@@ -32,7 +35,7 @@ void PrintFileContent(FILE *file, int number_non_blank, int number_all, int sque
 
         // Обработка управляющих символов и их отображение
         for (char *p = line; *p; p++) {
-            if (show_nonprinting && *p != '\n' && *p != '\t') { // Игнорируем LFD и TAB
+            if (show_nonprinting && *p != '\n' && *p != '\t' && *p < 127) { // Игнорируем LFD и TAB
                 if (*p < 32) { // Управляющие символы
                     putchar('^'); 
                     putchar(*p + 64); // Перевод в символы ^A - ^Z
@@ -54,16 +57,15 @@ void PrintFileContent(FILE *file, int number_non_blank, int number_all, int sque
         if (show_ends) {
             putchar('$'); // Выводим символ конца строки
         }
-       
-       //putchar('\n'); // Переход на новую строку после обработки строки
+
+        putchar('\n'); // Переход на новую строку после обработки строки
+        printed_last_line = 1; // Запоминаем, что последняя строка была напечатана
     }
 
-    // Для обеспечения вывода пустых строк с символом '$'
+    // Обработка оставшихся пустых строк для сжатия
     if (squeeze_blank && blank_lines > 0) {
-        for (int i = 0; i < blank_lines; i++) {
-            putchar('$'); // Выводим символ конца строки для пустых строк
-           putchar('\n'); // Переход на новую строку для каждой пустой линии
-        }
+        putchar('$'); // Выводим символ конца строки для пустой строки
+        putchar('\n'); // Переход на новую строку для пустой линии
     }
 }
 
@@ -88,7 +90,7 @@ int main(int argc, char **argv) {
         } else {
             FILE *file = fopen(argv[i], "r");
             if (!file) {
-                PrintError("n/a");
+                PrintError("Failed to open file");
                 return EXIT_FAILURE;
             }
             PrintFileContent(file, number_non_blank, number_all, squeeze_blank, show_tabs, show_ends, show_nonprinting);
